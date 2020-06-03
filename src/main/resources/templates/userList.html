@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+        <tr>
+            <td>序号</td>
+            <td>实际序号</td>
+            <td>用户名</td>
+            <td>密码</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="l,user:${user}">
+            <td th:text="${user.count}"></td>
+            <td th:text="${l.id}"></td>
+            <td th:text="${l.userName}"></td>
+            <td th:text="${l.userPassword}"></td>
+        </tr>
+    </tbody>
+</table>
+
+<a th:href="@{/user/getIndex}">跳回首页</a>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+
+
+<a href="/user/getUserAll">跳转到userList表中</a>
+<a th:href="@{/user/getUserAll}">跳转到userList中去</a>
+
+<a th:href="@{/user/getUserById(id=${1})}">通过id进行查询</a>
+</body>
+</html>

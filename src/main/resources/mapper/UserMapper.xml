@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nala.mapper.UserMapper">
+    <resultMap id="Usermap" type="user">
+        <id property="id" column="id"></id>
+        <result property="userName" column="user_name"></result>
+        <result property="userPassword" column="user_password"></result>
+    </resultMap>
+
+    <select id="getUserAll" resultMap="Usermap">
+        select id,user_name,user_password
+        from user
+    </select>
+</mapper>
